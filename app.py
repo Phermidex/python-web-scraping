@@ -17,10 +17,9 @@ class App:
 customFileName = input("Enter file name: ")
 customUrl = input("Enter url: ")
 
-file.manager("{0}.txt".format(customFileName)).write(App(customUrl).content_html())
+file.manager("%s.txt" % customFileName).write(App(customUrl).content_html())
 
-read_file = file.manager("{0}.txt".format(customFileName)).read()
+read_file = file.manager("%s.txt" % customFileName).read()
 
-print("Done! our file are successfully created. Check your file is called '{0}.txt' and this is your content\n\n\n{1}.".format(customFileName,read_file))
-
+print("Done! our file are successfully created. Check your file is called '%s.txt' and this is your content\n\n\n%s." % (customFileName, read_file))
 

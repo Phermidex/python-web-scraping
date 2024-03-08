@@ -21,5 +21,4 @@ class content:
         except AttributeError as e:
             return False
         
-        return "title:{0}\n\ncontent: {1}\
-                ".format(soup.title.string, soup.body.get_text())
+        return "title:%s\n\ncontent: %s" % (soup.title.get_text(), soup.get_text())
