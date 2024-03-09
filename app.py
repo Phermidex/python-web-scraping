@@ -15,7 +15,8 @@ class App:
 
 
 
-## run script and enter name, url and press enter: python app.py
+## run script and enter name, url press enter
+## commad to run script is: python app.py
 customFileName = input("Enter file name: ")
 customUrl = input("Enter url: ")
 
