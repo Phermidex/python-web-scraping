@@ -7,7 +7,7 @@ class App:
     """ url is the url you want to scraping """    
     def __init__(self, url):
         self.url = url
-        self.html = ""
+        
     """ returns the content of the url """
     def content_html(self):
         return contentHtml.content(self.url).getHtml()
