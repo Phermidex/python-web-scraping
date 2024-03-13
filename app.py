@@ -7,7 +7,7 @@ class App:
     """ url is the url you want to scraping """    
     def __init__(self, url):
         self.url = url
-        self.html = ""
+        
     """ returns the content of the url """
     def content_html(self):
         return content(self.url).getHtml()
@@ -15,7 +15,8 @@ class App:
 
 
 
-## run script and enter name, url and press enter: python app.py
+## run script and enter name, url press enter
+## commad to run script is: python app.py
 customFileName = input("Enter file name: ")
 customUrl = input("Enter url: ")
 
