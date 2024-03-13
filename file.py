@@ -4,15 +4,15 @@ class manager:
         self.filename = filename
 
     def read(self):
-        with open(self.filename, 'r') as f:
+        with open(self.filename, 'r', encoding='utf-8') as f:
             return f.read()
     
     def write(self, content):
-        with open(self.filename, 'w') as f:
-            f.writelines(content)
+        with open(self.filename, 'w', encoding='utf-8') as f:
+            f.write(content)
 
     def append(self, content):
-        with open(self.filename, 'a') as f:
+        with open(self.filename, 'a', encoding='utf-8') as f:
             f.write(content)
     
     def delete(self):

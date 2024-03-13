@@ -1,6 +1,6 @@
 
-import contentHtml
-import file
+from contentHtml import content
+from file import manager
 
 """ App for web scraping """
 class App:
@@ -10,7 +10,7 @@ class App:
         self.html = ""
     """ returns the content of the url """
     def content_html(self):
-        return contentHtml.content(self.url).getHtml()
+        return content(self.url).getHtml()
 
 
 
@@ -19,9 +19,9 @@ class App:
 customFileName = input("Enter file name: ")
 customUrl = input("Enter url: ")
 
-file.manager("%s.txt" % customFileName).write(App(customUrl).content_html())
-read_file = file.manager("%s.txt" % customFileName).read()
+manager("%s.md" % customFileName).write(str(App(customUrl).content_html()))
+read_file = manager("%s.md" % customFileName).read()
 print("Done! our file are successfully created.\
-       Check your file is called '%s.txt' and this is your content\n\n\n\
+       Check your file is called '%s.md' and this is your content\n\n\n\
       %s." % (customFileName, read_file))
 
